@@ -82,10 +82,33 @@ ostream& operator<<(ostream& r, const Student& student)
     return r;
 }
 
+bool operator==(const Student& student1, const Student& student2) 
+{
+    return 
+        (student1.id == student2.id &&
+        student1.lname == student2.lname &&
+        student1.fname == student2.fname &&
+        student1.mname == student2.mname &&
+        student1.birth == student2.birth &&
+        student1.phone == student2.phone &&
+        student1.faculty == student2.faculty &&
+        student1.course == student2.course &&
+        student1.group == student2.group);
+}
+
 int main()
 {
     setlocale(LC_ALL, "ukr");
-    Student object1;
-    cin >> object1;
-    cout << object1;
+    Student student1, student2, student3;
+    cin >> student1 >> student2 >> student3;
+    cout << student1 << endl << student2 << endl << student3 << endl;
+
+    if (student1 == student2) 
+    {
+        cout << "Об'єкти student1 та student2 ідентичні." << endl;
+    }
+    else
+    {
+        cout << "Об'єкти student1 та student2 різні." << endl;
+    }
 }
