@@ -68,11 +68,24 @@ istream& operator>>(istream& W, Student& student)
     return W;
 }
 
+ostream& operator<<(ostream& r, const Student& student)
+{
+    r << "ID: " << student.id << endl;
+    r << "Прізвище: " << student.lname << endl;
+    r << "Ім'я: " << student.fname << endl;
+    r << "По батькові: " << student.mname << endl;
+    r << "Дата народження: " << student.birth << endl;
+    r << "Телефон: " << student.phone << endl;
+    r << "Факультет: " << student.faculty << endl;
+    r << "Курс: " << student.course << endl;
+    r << "Група: " << student.group << endl;
+    return r;
+}
 
 int main()
 {
     setlocale(LC_ALL, "ukr");
     Student object1;
     cin >> object1;
-
+    cout << object1;
 }
