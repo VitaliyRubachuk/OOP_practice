@@ -21,6 +21,6 @@ public:
     Student(const Student&);
     ~Student();
     friend istream& operator>>(istream& W, Student& student);
-    friend ostream& operator<<(ostream& r, const Student& student);
+
 
 };
