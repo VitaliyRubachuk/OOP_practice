@@ -101,7 +101,7 @@ int main()
     setlocale(LC_ALL, "ukr");
     Student student1, student2, student3;
     cin >> student1 >> student2 >> student3;
-    cout << student1 << endl << student2 << endl << student3 << endl;
+    cout << endl << "Вивід:" << endl << student1 << endl << student2 << endl << student3 << endl;
 
     if (student1 == student2) 
     {
