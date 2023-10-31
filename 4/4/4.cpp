@@ -14,7 +14,7 @@ public:
 
     void i()
     {
-        cout << "Введіть ID: ";
+        cout << endl << "Введіть ID: ";
         cin >> id;
         cout << "Введіть прізвище: ";
         cin >> lastName;
@@ -62,7 +62,7 @@ void dMenu()
     cout << endl << "Меню:" << endl;
     cout << "1. Створити об'єкт PaymentForElectricity" << endl;
     cout << "2. Вийти" << endl;
-    cout << "Виберіть опцію: " << endl;
+    cout << "Виберіть опцію: " ;
 }
 
 int main()
@@ -70,36 +70,47 @@ int main()
     setlocale(LC_ALL, "ukr");
 
     int c;
-    PaymentForElectricity* payment = nullptr;
+    PaymentForElectricity* A[5] = { nullptr };
 
-    do 
+    for (int i = 0; i < 5; i++)
     {
         dMenu();
         cin >> c;
 
-        switch (c) 
+        switch (c)
         {
         case 1:
-            if (payment != nullptr) 
+            if (A[i] != nullptr)
             {
-                delete payment;
+                delete A[i];
             }
-            payment = new PaymentForElectricity();
-            payment->i();
-            payment->dI();
+            A[i] = new PaymentForElectricity();
+            A[i]->i();
             break;
         case 2:
-            cout << "До побачення!";
-            if (payment != nullptr)
+            cout << "//" << endl;
+            for (int j = 0; j < 5; j++)
             {
-                delete payment;
+                if (A[j] != nullptr)
+                {
+                    A[j]->dI(); 
+                    delete A[j];
+                }
             }
-            break;
+            return 0;
         default:
-            cout << "Невірний вибір. Будь ласка, спробуйте знову." << endl;
+            cout << "Невірний вибір" << endl;
         }
+    }
 
-    } while (c != 2);
+    for (int i = 0; i < 5; i++)
+    {
+        if (A[i] != nullptr)
+        {
+            A[i]->dI(); 
+        }
+    }
 
     return 0;
 }
+
