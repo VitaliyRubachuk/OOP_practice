@@ -23,8 +23,9 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QPushButton *createObjectButton;
+    QPushButton *displayObjectButton;
     QPushButton *exit;
-    QPushButton *openNewObjectDialogButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -35,12 +36,15 @@ public:
         MainWindow->resize(1103, 839);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        createObjectButton = new QPushButton(centralwidget);
+        createObjectButton->setObjectName("createObjectButton");
+        createObjectButton->setGeometry(QRect(210, 210, 75, 24));
+        displayObjectButton = new QPushButton(centralwidget);
+        displayObjectButton->setObjectName("displayObjectButton");
+        displayObjectButton->setGeometry(QRect(330, 210, 75, 24));
         exit = new QPushButton(centralwidget);
         exit->setObjectName("exit");
-        exit->setGeometry(QRect(350, 420, 75, 24));
-        openNewObjectDialogButton = new QPushButton(centralwidget);
-        openNewObjectDialogButton->setObjectName("openNewObjectDialogButton");
-        openNewObjectDialogButton->setGeometry(QRect(350, 370, 75, 24));
+        exit->setGeometry(QRect(440, 210, 75, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -58,8 +62,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        exit->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
-        openNewObjectDialogButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        createObjectButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        displayObjectButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        exit->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };
