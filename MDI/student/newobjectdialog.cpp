@@ -67,6 +67,5 @@ void NewObjectDialog::createObject()
     QString group = groupLineEdit->text();
 
     emit createObjectRequested(id, lname, fname, mname, birth, phone, faculty, course, group);
-
     close();
 }

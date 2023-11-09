@@ -25,6 +25,7 @@ public:
     QWidget *centralwidget;
     QPushButton *exit;
     QPushButton *openNewObjectDialogButton;
+    QPushButton *openPaymentDialogButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,10 +38,13 @@ public:
         centralwidget->setObjectName("centralwidget");
         exit = new QPushButton(centralwidget);
         exit->setObjectName("exit");
-        exit->setGeometry(QRect(350, 420, 75, 24));
+        exit->setGeometry(QRect(180, 280, 75, 24));
         openNewObjectDialogButton = new QPushButton(centralwidget);
         openNewObjectDialogButton->setObjectName("openNewObjectDialogButton");
-        openNewObjectDialogButton->setGeometry(QRect(350, 370, 75, 24));
+        openNewObjectDialogButton->setGeometry(QRect(80, 280, 75, 24));
+        openPaymentDialogButton = new QPushButton(centralwidget);
+        openPaymentDialogButton->setObjectName("openPaymentDialogButton");
+        openPaymentDialogButton->setGeometry(QRect(290, 280, 75, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -60,6 +64,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         exit->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
         openNewObjectDialogButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        openPaymentDialogButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };

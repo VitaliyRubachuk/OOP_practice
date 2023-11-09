@@ -13,6 +13,7 @@ SOURCES += \
     mainwindow.cpp \
     newobjectdialog.cpp \
     st.payment.cpp \
+    stpaymentdialog.cpp \
     student.cpp
 
 HEADERS += \
@@ -20,6 +21,7 @@ HEADERS += \
     newobjectdialog.h \
     person.h \
     st.payment.h \
+    stpaymentdialog.h \
     student.h
 
 FORMS += \
