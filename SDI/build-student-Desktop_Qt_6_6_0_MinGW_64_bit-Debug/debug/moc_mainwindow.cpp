@@ -55,12 +55,16 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "course",
     "group",
     "handleCreatePayment",
-    "corps",
-    "number1"
+    "id1",
+    "corps1",
+    "number1",
+    "phone1",
+    "faculty1",
+    "group1"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[36];
+    uint offsetsAndSizes[44];
     char stringdata0[11];
     char stringdata1[5];
     char stringdata2[1];
@@ -77,8 +81,12 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata13[7];
     char stringdata14[6];
     char stringdata15[20];
-    char stringdata16[6];
-    char stringdata17[8];
+    char stringdata16[4];
+    char stringdata17[7];
+    char stringdata18[8];
+    char stringdata19[7];
+    char stringdata20[9];
+    char stringdata21[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -100,8 +108,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(115, 6),  // "course"
         QT_MOC_LITERAL(122, 5),  // "group"
         QT_MOC_LITERAL(128, 19),  // "handleCreatePayment"
-        QT_MOC_LITERAL(148, 5),  // "corps"
-        QT_MOC_LITERAL(154, 7)   // "number1"
+        QT_MOC_LITERAL(148, 3),  // "id1"
+        QT_MOC_LITERAL(152, 6),  // "corps1"
+        QT_MOC_LITERAL(159, 7),  // "number1"
+        QT_MOC_LITERAL(167, 6),  // "phone1"
+        QT_MOC_LITERAL(174, 8),  // "faculty1"
+        QT_MOC_LITERAL(183, 6)   // "group1"
     },
     "MainWindow",
     "exit",
@@ -119,8 +131,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "course",
     "group",
     "handleCreatePayment",
-    "corps",
-    "number1"
+    "id1",
+    "corps1",
+    "number1",
+    "phone1",
+    "faculty1",
+    "group1"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -151,7 +167,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::QString,    6,    7,    8,    9,   10,   11,   12,   13,   14,
-    QMetaType::Void, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    6,   16,   17,   11,   12,   14,
+    QMetaType::Void, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,   16,   17,   18,   19,   20,   21,
 
        0        // eod
 };

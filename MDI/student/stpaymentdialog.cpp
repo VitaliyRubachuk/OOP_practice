@@ -3,12 +3,12 @@
 
 STPaymentDialog::STPaymentDialog(QWidget *parent)
     : QDialog(parent),
-      idLineEdit(new QLineEdit(this)),
-      corpsLineEdit(new QLineEdit(this)),
+      id1LineEdit(new QLineEdit(this)),
+      corps1LineEdit(new QLineEdit(this)),
       number1LineEdit(new QLineEdit(this)),
-      phoneLineEdit(new QLineEdit(this)),
-      facultyLineEdit(new QLineEdit(this)),
-      groupLineEdit(new QLineEdit(this)),
+      phone1LineEdit(new QLineEdit(this)),
+      faculty1LineEdit(new QLineEdit(this)),
+      group1LineEdit(new QLineEdit(this)),
       createButton(new QPushButton("Create", this))
 {
     setWindowTitle("Модальне вікно для оплати");
@@ -17,28 +17,29 @@ STPaymentDialog::STPaymentDialog(QWidget *parent)
     resize(500, 300);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->addWidget(createLabel("ID:"), 0, Qt::AlignTop);
-    layout->addWidget(idLineEdit);
-    layout->addWidget(createLabel("Корпус:"), 0, Qt::AlignTop);
-    layout->addWidget(corpsLineEdit);
-    layout->addWidget(createLabel("Номер квартири:"), 0, Qt::AlignTop);
+    layout->addWidget(createLabel1("ID:"), 0, Qt::AlignTop);
+    layout->addWidget(id1LineEdit);
+    layout->addWidget(createLabel1("Корпус:"), 0, Qt::AlignTop);
+    layout->addWidget(corps1LineEdit);
+    layout->addWidget(createLabel1("Номер квартири:"), 0, Qt::AlignTop);
     layout->addWidget(number1LineEdit);
-    layout->addWidget(createLabel("Телефон:"), 0, Qt::AlignTop);
-    layout->addWidget(phoneLineEdit);
-    layout->addWidget(createLabel("Факультет:"), 0, Qt::AlignTop);
-    layout->addWidget(facultyLineEdit);
-    layout->addWidget(createLabel("Група:"), 0, Qt::AlignTop);
-    layout->addWidget(groupLineEdit);
+    layout->addWidget(createLabel1("Телефон:"), 0, Qt::AlignTop);
+    layout->addWidget(phone1LineEdit);
+    layout->addWidget(createLabel1("Факультет:"), 0, Qt::AlignTop);
+    layout->addWidget(faculty1LineEdit);
+    layout->addWidget(createLabel1("Група:"), 0, Qt::AlignTop);
+    layout->addWidget(group1LineEdit);
     layout->addWidget(createButton);
 
     connect(createButton, &QPushButton::clicked, this, &STPaymentDialog::createPayment);
+
 }
 
-QLabel *STPaymentDialog::createLabel(const QString &text)
+QLabel *STPaymentDialog::createLabel1(const QString &text)
 {
-    QLabel *label = new QLabel(text, this);
-    label->setAlignment(Qt::AlignTop);
-    return label;
+    QLabel *label1 = new QLabel(text, this);
+    label1->setAlignment(Qt::AlignTop);
+    return label1;
 }
 
 STPaymentDialog::~STPaymentDialog()
@@ -47,13 +48,13 @@ STPaymentDialog::~STPaymentDialog()
 
 void STPaymentDialog::createPayment()
 {
-    int id = idLineEdit->text().toInt();
-    QString corps = corpsLineEdit->text();
+    int id1 = id1LineEdit->text().toInt();
+    QString corps1 = corps1LineEdit->text();
     QString number1 = number1LineEdit->text();
-    QString phone = phoneLineEdit->text();
-    QString faculty = facultyLineEdit->text();
-    QString group = groupLineEdit->text();
+    QString phone1 = phone1LineEdit->text();
+    QString faculty1 = faculty1LineEdit->text();
+    QString group1 = group1LineEdit->text();
 
-    emit createPaymentRequested(id, corps, number1, phone, faculty, group);
+    emit createPaymentRequested(id1, corps1, number1, phone1, faculty1, group1);
     close();
 }

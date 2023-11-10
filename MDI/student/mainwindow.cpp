@@ -1,4 +1,3 @@
-// mainwindow.cpp
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "student.h"
@@ -10,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::MainWindow),
       student(nullptr),
+      payment(nullptr),
       newObjectDialog(nullptr),
       paymentDialog(nullptr)
 {
@@ -35,6 +35,9 @@ MainWindow::~MainWindow()
     delete ui;
     if (student) {
         delete student;
+    }
+    if (payment) {
+        delete payment;
     }
 }
 
@@ -64,13 +67,14 @@ void MainWindow::handleCreateObject(int id, const QString &lname, const QString 
     QMessageBox::information(this, "Інформація", "Об'єкт створено:\n" + student->toString());
 }
 
-void MainWindow::handleCreatePayment(int id, const QString &corps, const QString &number1, const QString &phone, const QString &faculty, const QString &group)
+void MainWindow::handleCreatePayment(int id1, const QString &corps1, const QString &number1, const QString &phone1, const QString &faculty1, const QString &group1)
 {
-    if (student) {
-        delete student;
+    if (payment)
+    {
+        delete payment;
     }
 
-    stpayment* payment = new stpayment(id, corps, number1, phone, faculty, group);
+    payment = new stpayment(id1, corps1, number1, phone1, faculty1, group1);
 
-    QMessageBox::information(this, "Інформація", "Об'єкт створено:\n" + student->toString());
+    QMessageBox::information(this, "Інформація", "Об'єкт створено:\n" + payment->toString());
 }

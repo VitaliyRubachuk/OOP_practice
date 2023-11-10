@@ -16,20 +16,20 @@ public:
     ~STPaymentDialog();
 
 signals:
-    void createPaymentRequested(int id, const QString &corps, const QString &number1, const QString &phone, const QString &faculty, const QString &group);
+    void createPaymentRequested(int id1, const QString &corps1, const QString &number1, const QString &phone1, const QString &faculty1, const QString &group1);
 
 private slots:
     void createPayment();
 
 private:
-    QLineEdit *idLineEdit;
-    QLineEdit *corpsLineEdit;
+    QLineEdit *id1LineEdit;
+    QLineEdit *corps1LineEdit;
     QLineEdit *number1LineEdit;
-    QLineEdit *phoneLineEdit;
-    QLineEdit *facultyLineEdit;
-    QLineEdit *groupLineEdit;
+    QLineEdit *phone1LineEdit;
+    QLineEdit *faculty1LineEdit;
+    QLineEdit *group1LineEdit;
     QPushButton *createButton;
-    QLabel *createLabel(const QString &text);
+    QLabel *createLabel1(const QString &text);
 };
 
 #endif // STPAYMENTDIALOG_H

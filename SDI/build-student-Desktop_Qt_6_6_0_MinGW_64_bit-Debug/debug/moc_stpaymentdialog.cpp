@@ -42,12 +42,12 @@ static constexpr auto qt_meta_stringdata_CLASSSTPaymentDialogENDCLASS = QtMocHel
     "STPaymentDialog",
     "createPaymentRequested",
     "",
-    "id",
-    "corps",
+    "id1",
+    "corps1",
     "number1",
-    "phone",
-    "faculty",
-    "group",
+    "phone1",
+    "faculty1",
+    "group1",
     "createPayment"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
@@ -56,12 +56,12 @@ struct qt_meta_stringdata_CLASSSTPaymentDialogENDCLASS_t {
     char stringdata0[16];
     char stringdata1[23];
     char stringdata2[1];
-    char stringdata3[3];
-    char stringdata4[6];
+    char stringdata3[4];
+    char stringdata4[7];
     char stringdata5[8];
-    char stringdata6[6];
-    char stringdata7[8];
-    char stringdata8[6];
+    char stringdata6[7];
+    char stringdata7[9];
+    char stringdata8[7];
     char stringdata9[14];
 };
 #define QT_MOC_LITERAL(ofs, len) \
@@ -71,23 +71,23 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSTPaymentDialogENDCLASS_t qt_me
         QT_MOC_LITERAL(0, 15),  // "STPaymentDialog"
         QT_MOC_LITERAL(16, 22),  // "createPaymentRequested"
         QT_MOC_LITERAL(39, 0),  // ""
-        QT_MOC_LITERAL(40, 2),  // "id"
-        QT_MOC_LITERAL(43, 5),  // "corps"
-        QT_MOC_LITERAL(49, 7),  // "number1"
-        QT_MOC_LITERAL(57, 5),  // "phone"
-        QT_MOC_LITERAL(63, 7),  // "faculty"
-        QT_MOC_LITERAL(71, 5),  // "group"
-        QT_MOC_LITERAL(77, 13)   // "createPayment"
+        QT_MOC_LITERAL(40, 3),  // "id1"
+        QT_MOC_LITERAL(44, 6),  // "corps1"
+        QT_MOC_LITERAL(51, 7),  // "number1"
+        QT_MOC_LITERAL(59, 6),  // "phone1"
+        QT_MOC_LITERAL(66, 8),  // "faculty1"
+        QT_MOC_LITERAL(75, 6),  // "group1"
+        QT_MOC_LITERAL(82, 13)   // "createPayment"
     },
     "STPaymentDialog",
     "createPaymentRequested",
     "",
-    "id",
-    "corps",
+    "id1",
+    "corps1",
     "number1",
-    "phone",
-    "faculty",
-    "group",
+    "phone1",
+    "faculty1",
+    "group1",
     "createPayment"
 };
 #undef QT_MOC_LITERAL

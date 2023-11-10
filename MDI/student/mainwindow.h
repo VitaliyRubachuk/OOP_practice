@@ -1,9 +1,9 @@
-// mainwindow.h
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 #include "student.h"
+#include "st.payment.h"
 #include "newobjectdialog.h"
 #include "stpaymentdialog.h"
 
@@ -25,13 +25,14 @@ private slots:
     void openNewObjectDialog();
     void openPaymentDialog();
     void handleCreateObject(int id, const QString &lname, const QString &fname, const QString &mname, const QString &birth, const QString &phone, const QString &faculty, int course, const QString &group);
-    void handleCreatePayment(int id, const QString &corps, const QString &number1, const QString &phone, const QString &faculty, const QString &group);
+    void handleCreatePayment(int id1, const QString &corps1, const QString &number1, const QString &phone1, const QString &faculty1, const QString &group1);
 
 private:
     Ui::MainWindow *ui;
     Student *student;
-    NewObjectDialog *newObjectDialog;  // Додайте цей рядок
-    STPaymentDialog *paymentDialog;   // І, можливо, цей рядок, якщо використовуєте STPaymentDialog
+    stpayment *payment;
+    NewObjectDialog *newObjectDialog;
+    STPaymentDialog *paymentDialog;
 };
 
 #endif // MAINWINDOW_H
