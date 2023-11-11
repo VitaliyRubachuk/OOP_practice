@@ -21,4 +21,4 @@ private:
     QString group;
 };
 
-#endif // STUDENT_H
+#endif

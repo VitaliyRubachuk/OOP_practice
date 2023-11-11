@@ -60,7 +60,8 @@ void MainWindow::createObject()
 
 void MainWindow::displayObject()
 {
-    if (student) {
+    if (student)
+    {
         QMessageBox::information(this, "Інформація", "Інформація про об'єкт:\n" + student->toString());
     } else {
         QMessageBox::warning(this, "Помилка", "Об'єкт не було створено.");

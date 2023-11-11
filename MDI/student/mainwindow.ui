@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1103</width>
+    <width>1065</width>
     <height>839</height>
    </rect>
   </property>
@@ -14,43 +14,69 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="FListButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>300</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вивести список 1</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="exit">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>280</y>
-      <width>75</width>
-      <height>24</height>
+      <x>640</x>
+      <y>350</y>
+      <width>91</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>Вихід</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="openNewObjectDialogButton">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>280</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="openPaymentDialogButton">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>280</y>
-      <width>75</width>
-      <height>24</height>
+      <x>270</x>
+      <y>180</y>
+      <width>191</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Створення об'єкту 2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openNewObjectDialogButton">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>180</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Створення об'єкту 1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SListButton">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>300</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вивести список 2</string>
     </property>
    </widget>
   </widget>
@@ -59,7 +85,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1103</width>
+     <width>1065</width>
      <height>22</height>
     </rect>
    </property>

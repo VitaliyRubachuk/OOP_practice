@@ -12,17 +12,23 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     newobjectdialog.cpp \
+    paymentlistwindow.cpp \
     st.payment.cpp \
     stpaymentdialog.cpp \
-    student.cpp
+    student.cpp \
+    studentinfowindow.cpp \
+    studentlistwindow.cpp
 
 HEADERS += \
     mainwindow.h \
     newobjectdialog.h \
+    paymentlistwindow.h \
     person.h \
     st.payment.h \
     stpaymentdialog.h \
-    student.h
+    student.h \
+    studentinfowindow.h \
+    studentlistwindow.h
 
 FORMS += \
     mainwindow.ui

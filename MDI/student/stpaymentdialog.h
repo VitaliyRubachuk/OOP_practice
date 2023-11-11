@@ -32,4 +32,4 @@ private:
     QLabel *createLabel1(const QString &text);
 };
 
-#endif // STPAYMENTDIALOG_H
+#endif

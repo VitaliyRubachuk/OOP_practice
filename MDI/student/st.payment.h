@@ -1,4 +1,3 @@
-
 #ifndef ST_PAYMENT_H
 #define ST_PAYMENT_H
 #include "person.h"
@@ -19,4 +18,4 @@ private:
     QString group1;
 };
 
-#endif // ST_PAYMENT_H
+#endif

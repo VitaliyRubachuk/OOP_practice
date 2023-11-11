@@ -10,4 +10,4 @@ public:
     virtual ~Person() = default;
 };
 
-#endif // PERSON_H
+#endif
