@@ -16,10 +16,12 @@ StudentListWindow::~StudentListWindow()
 }
 
 
-void StudentListWindow::setStudentsList(const QVector<Student*>& students) {
+void StudentListWindow::setStudentsList(const QVector<Student*>& students)
+{
     studentListWidget->clear();
 
-    for (const Student* student : students) {
+    for (const Student* student : students)
+    {
         QListWidgetItem* item = new QListWidgetItem(student->toString());
         studentListWidget->addItem(item);
     }

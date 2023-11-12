@@ -32,4 +32,4 @@ private:
     QLabel *createLabel(const QString &text);
 };
 
-#endif // NEWOBJECTDIALOG_H
+#endif

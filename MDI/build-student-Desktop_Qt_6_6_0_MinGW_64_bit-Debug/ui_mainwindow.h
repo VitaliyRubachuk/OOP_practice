@@ -23,9 +23,11 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *createObjectButton;
-    QPushButton *displayObjectButton;
+    QPushButton *FListButton;
     QPushButton *exit;
+    QPushButton *openPaymentDialogButton;
+    QPushButton *openNewObjectDialogButton;
+    QPushButton *SListButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -33,22 +35,28 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1103, 839);
+        MainWindow->resize(1065, 839);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        createObjectButton = new QPushButton(centralwidget);
-        createObjectButton->setObjectName("createObjectButton");
-        createObjectButton->setGeometry(QRect(210, 210, 75, 24));
-        displayObjectButton = new QPushButton(centralwidget);
-        displayObjectButton->setObjectName("displayObjectButton");
-        displayObjectButton->setGeometry(QRect(330, 210, 75, 24));
+        FListButton = new QPushButton(centralwidget);
+        FListButton->setObjectName("FListButton");
+        FListButton->setGeometry(QRect(70, 300, 181, 51));
         exit = new QPushButton(centralwidget);
         exit->setObjectName("exit");
-        exit->setGeometry(QRect(440, 210, 75, 24));
+        exit->setGeometry(QRect(640, 350, 91, 41));
+        openPaymentDialogButton = new QPushButton(centralwidget);
+        openPaymentDialogButton->setObjectName("openPaymentDialogButton");
+        openPaymentDialogButton->setGeometry(QRect(270, 180, 191, 51));
+        openNewObjectDialogButton = new QPushButton(centralwidget);
+        openNewObjectDialogButton->setObjectName("openNewObjectDialogButton");
+        openNewObjectDialogButton->setGeometry(QRect(70, 180, 181, 51));
+        SListButton = new QPushButton(centralwidget);
+        SListButton->setObjectName("SListButton");
+        SListButton->setGeometry(QRect(270, 300, 191, 51));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1103, 22));
+        menubar->setGeometry(QRect(0, 0, 1065, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -62,9 +70,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        createObjectButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        displayObjectButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        exit->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        FListButton->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\262\320\265\321\201\321\202\320\270 \321\201\320\277\320\270\321\201\320\276\320\272 1", nullptr));
+        exit->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
+        openPaymentDialogButton->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\265\320\275\320\275\321\217 \320\276\320\261'\321\224\320\272\321\202\321\203 2", nullptr));
+        openNewObjectDialogButton->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\265\320\275\320\275\321\217 \320\276\320\261'\321\224\320\272\321\202\321\203 1", nullptr));
+        SListButton->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\262\320\265\321\201\321\202\320\270 \321\201\320\277\320\270\321\201\320\276\320\272 2", nullptr));
     } // retranslateUi
 
 };

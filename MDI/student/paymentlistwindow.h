@@ -1,5 +1,3 @@
-// paymentlistwindow.h
-
 #ifndef PAYMENTLISTWINDOW_H
 #define PAYMENTLISTWINDOW_H
 

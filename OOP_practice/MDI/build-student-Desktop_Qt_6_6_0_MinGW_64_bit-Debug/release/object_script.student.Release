@@ -1,0 +1,16 @@
+release/SqliteDBManager.o
+release/main.o
+release/mainwindow.o
+release/newobjectdialog.o
+release/paymentlistwindow.o
+release/st.payment.o
+release/stpaymentdialog.o
+release/student.o
+release/studentinfowindow.o
+release/studentlistwindow.o
+release/moc_mainwindow.o
+release/moc_newobjectdialog.o
+release/moc_paymentlistwindow.o
+release/moc_stpaymentdialog.o
+release/moc_studentinfowindow.o
+release/moc_studentlistwindow.o

@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "sqlitedbmanager.h"
 #include <QMainWindow>
 #include "student.h"
 #include "st.payment.h"
@@ -8,6 +9,9 @@
 #include "stpaymentdialog.h"
 #include "studentlistwindow.h"
 #include "paymentlistwindow.h"
+#include <QSqlTableModel>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 
 namespace Ui
 {
@@ -23,6 +27,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void onClearTablesClicked();
     void exit();
     void openNewObjectDialog();
     void openPaymentDialog();
@@ -33,14 +38,14 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    SqliteDBManager dbManager;
+    QSqlTableModel *model;
     Student *student;
     stpayment *payment;
     NewObjectDialog *newObjectDialog;
     STPaymentDialog *paymentDialog;
     StudentListWindow *studentListWindow;
     PaymentListWindow *paymentListWindow;
-    QVector<Student*> studentsContainer;
-    QVector<stpayment*> paymentsContainer;
 };
 
 #endif

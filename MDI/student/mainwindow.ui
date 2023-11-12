@@ -56,9 +56,9 @@
    <widget class="QPushButton" name="openNewObjectDialogButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>70</x>
       <y>180</y>
-      <width>201</width>
+      <width>181</width>
       <height>51</height>
      </rect>
     </property>
@@ -77,6 +77,19 @@
     </property>
     <property name="text">
      <string>Вивести список 2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearTablesButton">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>270</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистити базу даних</string>
     </property>
    </widget>
   </widget>

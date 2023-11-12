@@ -1,21 +1,29 @@
-#ifndef ST_PAYMENT_H
-#define ST_PAYMENT_H
-#include "person.h"
+#ifndef STPAYMENT_H
+#define STPAYMENT_H
 
-class stpayment : public Person
+#include <QString>
+
+class stpayment
 {
 public:
-    stpayment(int id1, const QString &corps1, const QString &number1, const QString &phone1, const QString &faculty1, const QString &group1);
+    stpayment(int id, const QString &corps, const QString &number, const QString &phone, const QString &faculty, const QString &group);
+    stpayment(const QString &number, const QString &phone, const QString &faculty, const QString &group);
+    stpayment();
 
-    QString toString() const override;
+    QString toString() const;
+    QString getCorps() const;
+    QString getNumber() const;
+    QString getPhone() const;
+    QString getFaculty() const;
+    QString getGroup() const;
 
 private:
-    int id1;
-    QString corps1;
-    QString number1;
-    QString phone1;
-    QString faculty1;
-    QString group1;
+    int id;
+    QString corps;
+    QString number;
+    QString phone;
+    QString faculty;
+    QString group;
 };
 
 #endif
