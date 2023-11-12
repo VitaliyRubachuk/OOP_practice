@@ -8,6 +8,10 @@
 #include "sqlitedbmanager.h"
 #include <QMessageBox>
 #include <QSqlTableModel>
+#include <QApplication>
+#include <QFile>
+#include <QTextStream>
+#include <QDateTime>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -58,8 +62,10 @@ void MainWindow::onClearTablesClicked()
     if (success)
     {
         qDebug() << "Таблиця очищена!";
-    } else {
-        qDebug() << "Не вдалось очистити таблицю!";
+    }
+    else
+    {
+        qWarning() << "Не вдалось очистити таблицю!";
     }
 }
 
@@ -84,6 +90,34 @@ void MainWindow::openPaymentDialog()
     paymentDialog->show();
 }
 
+void MainWindow::customMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+    QFile logFile("logfile.txt");
+    if (!logFile.open(QIODevice::WriteOnly | QIODevice::Append))
+        return;
+
+    QTextStream logStream(&logFile);
+    switch (type)
+    {
+    case QtDebugMsg:
+        logStream << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss ") << "[Debug] " << msg << Qt::endl;
+        break;
+    case QtInfoMsg:
+        logStream << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss ") << "[Info] " << msg << Qt::endl;
+        break;
+    case QtWarningMsg:
+        logStream << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss ") << "[Warning] " << msg << Qt::endl;
+        break;
+    case QtCriticalMsg:
+        logStream << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss ") << "[Critical] " << msg << Qt::endl;
+        break;
+    case QtFatalMsg:
+        logStream << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss ") << "[Fatal] " << msg << Qt::endl;
+        abort();
+    }
+}
+
+
 void MainWindow::handleCreateObject(int id, const QString &lname, const QString &fname, const QString &mname, const QString &birth, const QString &phone, const QString &faculty, int course, const QString &group)
 {
     model->insertRow(0);
@@ -103,7 +137,15 @@ void MainWindow::handleCreateObject(int id, const QString &lname, const QString 
     dbManager.createTables();
     dbManager.insertIntoTable(student);
 
-    QMessageBox::information(this, "Інформація", "Об'єкт створено:\n" + student.toString());
+if (dbManager.insertIntoTable(student))
+    {
+        QMessageBox::information(this, "Інформація", "Об'єкт створено:\n" + student.toString());
+    }
+    else
+    {
+        QMessageBox::warning(this, "Помилка", "Не вдалося зберегти об'єкт в базі.");
+    }
+
 }
 
 void MainWindow::handleCreatePayment(int id1, const QString &corps1, const QString &number1, const QString &phone1, const QString &faculty1, const QString &group1)
@@ -124,7 +166,9 @@ void MainWindow::handleCreatePayment(int id1, const QString &corps1, const QStri
     if (dbManager.insertIntoTable(payment))
     {
         QMessageBox::information(this, "Інформація", "Об'єкт створено і збережено в базі:\n" + payment.toString());
-    } else {
+    }
+    else
+    {
         QMessageBox::warning(this, "Помилка", "Не вдалося зберегти об'єкт в базі.");
     }
 }

@@ -25,6 +25,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    static void customMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg);
 
 private slots:
     void onClearTablesClicked();

@@ -1,0 +1,8 @@
+2023-11-12 13:49:25 [Debug] З'єднано.
+2023-11-12 13:49:27 [Warning] QSqlDatabasePrivate::removeDatabase: connection 'qt_sql_default_connection' is still in use, all queries will cease to work.
+2023-11-12 13:49:27 [Warning] QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+2023-11-12 13:49:27 [Debug] З'єднано.
+2023-11-12 13:49:31 [Warning] QSqlDatabasePrivate::removeDatabase: connection 'qt_sql_default_connection' is still in use, all queries will cease to work.
+2023-11-12 13:49:31 [Warning] QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+2023-11-12 13:49:31 [Debug] З'єднано.
+2023-11-12 13:49:33 [Debug] Таблиця очищена!

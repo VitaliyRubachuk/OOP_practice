@@ -52,7 +52,7 @@ bool SqliteDBManager::createTables()
 
     if (!query.exec(createStudentsTableQuery))
     {
-        qDebug() << "Таблиця не створена:" << query.lastError();
+        qCritical() << "Таблиця не створена:" << query.lastError().text();
         return false;
     }
 
@@ -68,7 +68,7 @@ bool SqliteDBManager::createTables()
 
     if (!query.exec(createPaymentsTableQuery))
     {
-        qDebug() << "Таблиця не створена:" << query.lastError();
+        qCritical() << "Таблиця не створена:" << query.lastError().text();
         return false;
     }
 
@@ -93,7 +93,7 @@ bool SqliteDBManager::insertIntoTable(const Student &student)
 
     if (!query.exec())
     {
-        qDebug() << "Вставка провалилась:" << query.lastError();
+        qCritical() << "Вставка провалилась:" << query.lastError().text();
         return false;
     }
 
@@ -138,8 +138,8 @@ bool SqliteDBManager::insertIntoTable(const stpayment &payment)
 
     if (!query.exec())
     {
-        qDebug() << "Вставка провалилась:" << query.lastError();
-            return false;
+        qCritical() << "Вставка провалилась:" << query.lastError().text();
+        return false;
     }
 
     return true;
@@ -153,8 +153,8 @@ bool SqliteDBManager::openDataBase()
 
     if (!db.open())
     {
-        qDebug() << "База даних не відкривається:" << db.lastError();
-        return false;
+            qCritical() << "База даних не відкривається:" << db.lastError().text();
+                return false;
     }
 
     return true;
